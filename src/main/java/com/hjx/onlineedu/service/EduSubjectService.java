@@ -2,6 +2,7 @@ package com.hjx.onlineedu.service;
 
 import com.hjx.onlineedu.pojo.EduSubject;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface EduSubjectService extends IService<EduSubject> {
 
+    void importSubjectData(MultipartFile file, EduSubjectService eduSubjectService);
 }

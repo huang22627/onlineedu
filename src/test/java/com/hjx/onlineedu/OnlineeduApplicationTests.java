@@ -10,11 +10,13 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class OnlineeduApplicationTests {
-
+    @Value("${endpoint}")
+    String end;
     @Test
     void contextLoads() {
 
@@ -62,6 +64,11 @@ class OnlineeduApplicationTests {
         mpg.setStrategy(strategy);
         // 6、执行
         mpg.execute();*/
+    }
+
+    @Test
+    void testValue(){
+        System.out.println(end);
     }
 
 }
